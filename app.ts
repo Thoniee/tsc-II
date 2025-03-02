@@ -77,14 +77,14 @@ interface TodoItem {
   const todoList = new TodoList();
   
   todoList.addTodo("Learn TypeScript", new Date(27, 2, 2025));
-  todoList.addTodo("Build a Todo App", new Date(28-2-2025));
+  todoList.addTodo("Build a tsc Todo App", new Date(28-2-2025));
   
   console.log("All todos:", todoList.listTodos());
   
   todoList.completeTodo(1);
   console.log("After completing todo 1:", todoList.listTodos());
   
-  todoList.updateTodoTask(2, "Build an Advanced Todo App");
+  todoList.updateTodoTask(2, "Build an Advanced tsc Todo App");
   console.log("After updating todo 2:", todoList.listTodos());
   
   console.log("Incomplete todos:", todoList.filterTodos(false));
