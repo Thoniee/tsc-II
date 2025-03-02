@@ -1,4 +1,4 @@
-// 2. Implement the TodoList class
+// Implement the TodoList class
 var TodoList = /** @class */ (function () {
     function TodoList() {
         this.todos = [];
@@ -38,11 +38,11 @@ var TodoList = /** @class */ (function () {
     TodoList.prototype.listTodos = function () {
         return this.todos;
     };
-    // 4. Filter todos by completed status
+    // Filter todos by completed status
     TodoList.prototype.filterTodos = function (completed) {
         return this.todos.filter(function (todo) { return todo.completed === completed; });
     };
-    // 5. Update task description
+    // Update task description
     TodoList.prototype.updateTodoTask = function (id, newTask) {
         var todo = this.findTodoById(id);
         if (todo) {
@@ -52,20 +52,19 @@ var TodoList = /** @class */ (function () {
             throw new Error("Todo with id ".concat(id, " not found"));
         }
     };
-    // 6. Clear all completed todos
+    // Clear all completed todos
     TodoList.prototype.clearCompletedTodos = function () {
         this.todos = this.todos.filter(function (todo) { return !todo.completed; });
     };
-    // Helper method to find a todo by id
+    // method to find a todo by id
     TodoList.prototype.findTodoById = function (id) {
         return this.todos.find(function (todo) { return todo.id === id; });
     };
     return TodoList;
 }());
-// Example usage
 var todoList = new TodoList();
-todoList.addTodo("Learn TypeScript", new Date(2023, 5, 1));
-todoList.addTodo("Build a Todo App", new Date(2023, 5, 15));
+todoList.addTodo("Learn TypeScript", new Date(27, 2, 2025));
+todoList.addTodo("Build a Todo App", new Date(28 - 2 - 2025));
 console.log("All todos:", todoList.listTodos());
 todoList.completeTodo(1);
 console.log("After completing todo 1:", todoList.listTodos());
